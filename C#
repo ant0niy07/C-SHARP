@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 
 namespace textAdventure
-{
-    class Program
+{class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
             gameTitle();
         }
 
         public static void gameTitle()
-        {
-            Console.WriteLine("Добро Пожаловать в мою игру");
+        {   Console.WriteLine("Добро Пожаловать в мою игру");
             Console.WriteLine("Нажми 'Enter' чтобы продолжить");
             Console.ReadLine();
             Console.Clear();
@@ -22,9 +20,7 @@ namespace textAdventure
         }
 
         public static void first()
-        {
-            string choice;
-
+        {   string choice;
             Console.WriteLine("Ты просыпаешься в классе с сердитым мистером Штормом стоящим над тобой");
             Console.WriteLine("Что ты делаешь?");
             Console.WriteLine("1.Ударь его");
@@ -33,7 +29,6 @@ namespace textAdventure
             Console.Write("Choice: ");
             choice = Console.ReadLine().ToLower();
             Console.Clear();
-
             switch (choice)
             {
                 case "1":
@@ -47,14 +42,11 @@ namespace textAdventure
                         Console.ReadLine();
                         gameOver();
                         break;
-
-
-                    }
+                        }
 
                 case "2":
 
-                    {
-                        Console.WriteLine("Щеки мистера Шторма становятся цвета помидора");
+                    {   Console.WriteLine("Щеки мистера Шторма становятся цвета помидора");
                         Console.WriteLine("Ты хочешь плакать? Сделай Это в коридоре!'Он кричит во всю глотку'.");
                         Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
                         Console.ReadLine();
@@ -62,23 +54,17 @@ namespace textAdventure
                         break;
                     }
 
+                    case "3":
 
-                case "3":
-
-                    {
-                        Console.WriteLine("Мистер Шторм орет на тебя.");
+                    {   Console.WriteLine("Мистер Шторм орет на тебя.");
                         Console.WriteLine("БЫСТРО ВЕРНИСЬ.");
                         Console.WriteLine("Его ор слышит вся школа");
                         Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
                         Console.ReadLine();
                         second();
-                        break;
-
-
+                        break
+                        }
                     }
-
-
-            }
         }
         public static void second()
         {
@@ -88,9 +74,7 @@ namespace textAdventure
                 "В коридоре срабатывает пожарная сигнализация" };
             int randomNumber = rnd.Next(0, 3);
             string secText = secOptions[randomNumber];
-
             string secChoice;
-
             Console.WriteLine(secText);
             Console.WriteLine("Ты пытаешься спрятаться в ванной? Да или Нет");
             Console.Write("Выбор: ");
@@ -101,8 +85,7 @@ namespace textAdventure
                 third();
             }
             else if (secChoice == "no" || secChoice == "n")
-            {
-                Console.WriteLine("Метеорит врезается в школу именно в этот момент, И убивает тебя мгновенно.");
+            {   Console.WriteLine("Метеорит врезается в школу именно в этот момент, И убивает тебя мгновенно.");
                 Console.WriteLine("Нажмите 'Enter'чтобы продолжить!");
                 Console.ReadLine();
                 gameOver();
@@ -111,8 +94,7 @@ namespace textAdventure
 
 
         public static void third()
-        {
-            int age;
+        {   int age;
             Console.WriteLine("Будет взрыв не хочешь спрятаться в ванной и  так ты врываешься в ванную а там все твои друзья и родственники");
             Console.WriteLine("Они кричат сюрприз! и ты вспоминаешь что у тебя сегодня день рождения.");
             Console.WriteLine("Сколько тебе лет?");
@@ -120,8 +102,7 @@ namespace textAdventure
             int.TryParse(Console.ReadLine(), out age);
 
             while (age < 100)
-            {
-                Console.WriteLine("Серьезно? ты выглядишь старше этого!");
+            {   Console.WriteLine("Серьезно? ты выглядишь старше этого!");
                 Console.WriteLine("Сколько тебе лет на самом деле?");
                 Console.WriteLine("Тебе: (Лет/Год)");
                 int.TryParse(Console.ReadLine(), out age);
@@ -132,8 +113,7 @@ namespace textAdventure
     }
 
     public static void gameOver()
-    {
-        Console.Clear();
+    {   Console.Clear();
         Console.WriteLine("На твоих похоронах рассказывают про твою храбрость потом они понимают на чьих похоронах они присутвсвуют и забирают свои слова обратно");
         Console.WriteLine("В следующий раз повезет больше!");
         Console.ReadLine();
@@ -142,8 +122,7 @@ namespace textAdventure
     }
 
     public static void youWin()
-    {
-        Console.Clear();
+    {   Console.Clear();
         Console.WriteLine("Вечеринка по поводу твоего дня рождения имела большой успех, \nТор дал всем суперспособности \nВсе вы проживете ещё сто лет");
         Console.WriteLine("Отличная работа!! Ты выиграл!!");
         Console.WriteLine("Нажми 'Enter' чтобы начать заново\nКОНЕЦ");
