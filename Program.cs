@@ -13,56 +13,58 @@ namespace textAdventure
         }
 
         public static void GameTitle()
-        {   Console.WriteLine("Добро Пожаловать в мою игру");
+        {   
+            Console.WriteLine("Добро Пожаловать в мою игру");
             Console.WriteLine("Нажми 'Enter' чтобы продолжить");
             Console.ReadLine();
             Console.Clear();
             First();
-
         }
     
-                public static void First()
-                {   Console.WriteLine("Ты просыпаешься в классе с сердитым мистером Штормом стоящим над тобой");
-                    Console.WriteLine("Что ты делаешь?");
-                    Console.WriteLine("1.Ударь его");
-                    Console.WriteLine("2.Заплачь");
-                    Console.WriteLine("3.выбеги из кабинета");
-                    Console.Write("Choice: ");
-                    string choice = Console.ReadLine().ToLower()
-                    Console.Clear();
-                    switch (choice)
-                    {
-                        case "1":
-                        {   Console.WriteLine("Твой кулак впечатан в лицо мистера Шторма");
-                            Console.WriteLine("Все остальные ученики в классе радуются тебе");
-                            Console.WriteLine("Поднялся переполох и пришла разобраться мисис Шторм");
-                            Console.WriteLine("Когда она увидела что её муж плачет на полу она начала стрелять своим лазерным взглядом в тебя");
-                            Console.WriteLine("Нажми 'Enter' Чтобы продолжить");
-                            Console.ReadLine();
-                            GameOver();
-                            break;
-                        }
+        public static void First()
+        {   
+            Console.WriteLine("Ты просыпаешься в классе с сердитым мистером Штормом стоящим над тобой");
+            Console.WriteLine("Что ты делаешь?");
+            Console.WriteLine("1.Ударь его");
+            Console.WriteLine("2.Заплачь");
+            Console.WriteLine("3.выбеги из кабинета");
+            Console.Write("Choice: ");
+            string choice = Console.ReadLine().ToLower()
+            Console.Clear();
+            switch (choice)
+            {
+            case "1":
+                {   
+                    Console.WriteLine("Твой кулак впечатан в лицо мистера Шторма");
+                    Console.WriteLine("Все остальные ученики в классе радуются тебе");
+                    Console.WriteLine("Поднялся переполох и пришла разобраться мисис Шторм");
+                    Console.WriteLine("Когда она увидела что её муж плачет на полу она начала стрелять своим лазерным взглядом в тебя");
+                    Console.WriteLine("Нажми 'Enter' Чтобы продолжить");
+                    Console.ReadLine();
+                    GameOver();
+                    break;
+                }
 
-                        case "2":
+            case "2":
+                {
+                    Console.WriteLine("Щеки мистера Шторма становятся цвета помидора");
+                    Console.WriteLine("Ты хочешь плакать? Сделай Это в коридоре!'Он кричит во всю глотку'.");
+                    Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
+                    Console.ReadLine();
+                    Second();
+                    break;
+                }
 
-                            {   Console.WriteLine("Щеки мистера Шторма становятся цвета помидора");
-                                Console.WriteLine("Ты хочешь плакать? Сделай Это в коридоре!'Он кричит во всю глотку'.");
-                                Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
-                                Console.ReadLine();
-                                Second();
-                                break;
-                            }
-
-                        case "3":
-
-                            {   Console.WriteLine("Мистер Шторм орет на тебя.");
-                                Console.WriteLine("БЫСТРО ВЕРНИСЬ.");
-                                Console.WriteLine("Его ор слышит вся школа");
-                                Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
-                                Console.ReadLine();
-                                Second();
-                                break;
-                            }
+            case "3":
+                {  
+                    Console.WriteLine("Мистер Шторм орет на тебя.");
+                    Console.WriteLine("БЫСТРО ВЕРНИСЬ.");
+                    Console.WriteLine("Его ор слышит вся школа");
+                    Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
+                    Console.ReadLine();
+                    Second();
+                    break;
+                }
                     }
                 }
                 public static void Second()
