@@ -12,6 +12,7 @@ namespace textAdventure
             GameTitle();
         }
 
+
         public static void GameTitle()
         {   
             Console.WriteLine("Добро Пожаловать в мою игру");
@@ -21,6 +22,7 @@ namespace textAdventure
             First();
         }
     
+
         public static void First()
         {   
             Console.WriteLine("Ты просыпаешься в классе с сердитым мистером Штормом стоящим над тобой");
@@ -65,10 +67,13 @@ namespace textAdventure
                     Second();
                     break;
                 }
-                    }
-                }
+            }
+        }
+                
+        
                 public static void Second()
-                {   Random rnd = new Random();
+                {  
+                    Random rnd = new Random();
                     string[] secOptions = { "В коридоре ты видишь что менты обыскивают все шкафчики о которых одни беспокоются больше чем другие",
                                 "следующее что ты видешь это то что тебя преследуют",
                                 "В коридоре срабатывает пожарная сигнализация" };
@@ -93,17 +98,17 @@ namespace textAdventure
 
 
                 public static void Third()
-                {   int age;
+                {  
                     Console.WriteLine("Будет взрыв не хочешь спрятаться в ванной и  так ты врываешься в ванную а там все твои друзья и родственники");
                     Console.WriteLine("Они кричат сюрприз! и ты вспоминаешь что у тебя сегодня день рождения.");
                     Console.WriteLine("Сколько тебе лет?");
                     Console.WriteLine("Тебе:  (лет/год)");
-                    int.TryParse(Console.ReadLine(), out age);
+                    int age = int.TryParse(Console.ReadLine(), out age);
                     while (age < 100)
                     {   Console.WriteLine("Серьезно? ты выглядишь старше этого!");
                         Console.WriteLine("Сколько тебе лет на самом деле?");
                         Console.WriteLine("Тебе: (Лет/Год)");
-                        int.TryParse(Console.ReadLine(), out age);
+                    int age = int.TryParse(Console.ReadLine(), out age);
                     }
                     Console.WriteLine("Ух ты какой ты старый!");
                     YouWin();
@@ -111,7 +116,8 @@ namespace textAdventure
                
 
                 public static void GameOver()
-                {   Console.Clear();
+                {   
+                    Console.Clear();
                     Console.WriteLine("На твоих похоронах рассказывают про твою храбрость потом они понимают на чьих похоронах они присутвсвуют и забирают свои слова обратно");
                     Console.WriteLine("В следующий раз повезет больше!");
                     Console.ReadLine();
@@ -119,8 +125,10 @@ namespace textAdventure
                     GameTitle();
                 }
 
+
                 public static void YouWin()
-                {   Console.Clear();
+                {   
+                    Console.Clear();
                     Console.WriteLine("Вечеринка по поводу твоего дня рождения имела большой успех, \nТор дал всем суперспособности \nВсе вы проживете ещё сто лет");
                     Console.WriteLine("Отличная работа!! Ты выиграл!!");
                     Console.WriteLine("Нажми 'Enter' чтобы начать заново\nКОНЕЦ");
