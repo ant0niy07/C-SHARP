@@ -12,7 +12,6 @@ namespace textAdventure
             GameTitle();
         }
 
-
         public static void GameTitle()
         {   
             Console.WriteLine("Добро Пожаловать в мою игру");
@@ -22,7 +21,6 @@ namespace textAdventure
             First();
         }
     
-
         public static void First()
         {   
             Console.WriteLine("Ты просыпаешься в классе с сердитым мистером Штормом стоящим над тобой");
@@ -70,7 +68,6 @@ namespace textAdventure
             }
         }
                 
-        
                 public static void Second()
                 {  
                     Random rnd = new Random();
@@ -89,13 +86,13 @@ namespace textAdventure
                         Third();
                     }
                     else if (secChoice == "no" || secChoice == "n")
-                    {   Console.WriteLine("Метеорит врезается в школу именно в этот момент, И убивает тебя мгновенно.");
+                    {   
+                        Console.WriteLine("Метеорит врезается в школу именно в этот момент, И убивает тебя мгновенно.");
                         Console.WriteLine("Нажмите 'Enter'чтобы продолжить!");
                         Console.ReadLine();
                         GameOver();
                     }
                 }
-
 
                 public static void Third()
                 {  
@@ -105,7 +102,8 @@ namespace textAdventure
                     Console.WriteLine("Тебе:  (лет/год)");
                     int age = int.TryParse(Console.ReadLine(), out age);
                     while (age < 100)
-                    {   Console.WriteLine("Серьезно? ты выглядишь старше этого!");
+                    {  
+                        Console.WriteLine("Серьезно? ты выглядишь старше этого!");
                         Console.WriteLine("Сколько тебе лет на самом деле?");
                         Console.WriteLine("Тебе: (Лет/Год)");
                     int age = int.TryParse(Console.ReadLine(), out age);
@@ -114,7 +112,6 @@ namespace textAdventure
                     YouWin();
                 }
                
-
                 public static void GameOver()
                 {   
                     Console.Clear();
@@ -124,7 +121,6 @@ namespace textAdventure
                     Console.Clear();
                     GameTitle();
                 }
-
 
                 public static void YouWin()
                 {   
