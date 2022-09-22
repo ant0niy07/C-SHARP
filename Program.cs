@@ -68,20 +68,18 @@ namespace textAdventure
             }
         } 
                 
-            public static void Second()
-            {  
-                Random rnd = new Random();
-                string[] secOptions = { "В коридоре ты видишь что менты обыскивают все шкафчики о которых одни беспокоются больше чем другие",
-                      "следующее что ты видешь это то что тебя преследуют",
-                      "В коридоре срабатывает пожарная сигнализация" };
-                int randomNumber = rnd.Next(0, 3);
-                string secText = secOptions[randomNumber];
-                Console.WriteLine(secText);
-                Console.WriteLine("Ты пытаешься спрятаться в ванной? Да или Нет");
-                Console.WriteLine("Выбор: ");
-                string secChoice = Console.ReadLine().ToLower();
-
-                    if (secChoice == "yes" || secChoice == "y")
+        public static void Second()
+        {  Random rnd = new Random();
+           string[] secOptions = { "В коридоре ты видишь что менты обыскивают все шкафчики о которых одни беспокоются больше чем другие",
+                  "следующее что ты видешь это то что тебя преследуют",
+                  "В коридоре срабатывает пожарная сигнализация" };
+           int randomNumber = rnd.Next(0, 3);
+           string secText = secOptions[randomNumber];
+           Console.WriteLine(secText);
+           Console.WriteLine("Ты пытаешься спрятаться в ванной? Да или Нет");
+           Console.WriteLine("Выбор: ");
+           string secChoice = Console.ReadLine().ToLower();
+           if (secChoice == "yes" || secChoice == "y")
                     {
                         Third();
                     }
@@ -93,7 +91,7 @@ namespace textAdventure
                     }
             }
 
-            public static void Third()
+           public static void Third()
             {  
                 Console.WriteLine("Будет взрыв не хочешь спрятаться в ванной и  так ты врываешься в ванную а там все твои друзья и родственники");
                 Console.WriteLine("Они кричат сюрприз! и ты вспоминаешь что у тебя сегодня день рождения.");
