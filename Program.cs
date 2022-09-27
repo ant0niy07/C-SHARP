@@ -35,35 +35,35 @@ namespace textAdventure
             {
             case "1":
             {   
-                    Console.WriteLine("Твой кулак впечатан в лицо мистера Шторма");
-                    Console.WriteLine("Все остальные ученики в классе радуются тебе");
-                    Console.WriteLine("Поднялся переполох и пришла разобраться мисис Шторм");
-                    Console.WriteLine("Когда она увидела что её муж плачет на полу она начала стрелять своим лазерным взглядом в тебя");
-                    Console.WriteLine("Нажми 'Enter' Чтобы продолжить");
-                    Console.ReadLine();
-                    GameOver();
-                    break;
+                Console.WriteLine("Твой кулак впечатан в лицо мистера Шторма");
+                Console.WriteLine("Все остальные ученики в классе радуются тебе");
+                Console.WriteLine("Поднялся переполох и пришла разобраться мисис Шторм");
+                Console.WriteLine("Когда она увидела что её муж плачет на полу она начала стрелять своим лазерным взглядом в тебя");
+                Console.WriteLine("Нажми 'Enter' Чтобы продолжить");
+                Console.ReadLine();
+                GameOver();
+                break;
             }
 
             case "2":
             {
-                    Console.WriteLine("Щеки мистера Шторма становятся цвета помидора");
-                    Console.WriteLine("Ты хочешь плакать? Сделай Это в коридоре!'Он кричит во всю глотку'.");
-                    Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
-                    Console.ReadLine();
-                    Second();
-                    break;
+                Console.WriteLine("Щеки мистера Шторма становятся цвета помидора");
+                Console.WriteLine("Ты хочешь плакать? Сделай Это в коридоре!'Он кричит во всю глотку'.");
+                Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
+                Console.ReadLine();
+                Second();
+                break;
             }
 
             case "3":
             {  
-                    Console.WriteLine("Мистер Шторм орет на тебя.");
-                    Console.WriteLine("БЫСТРО ВЕРНИСЬ.");
-                    Console.WriteLine("Его ор слышит вся школа");
-                    Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
-                    Console.ReadLine();
-                    Second();
-                    break;
+                Console.WriteLine("Мистер Шторм орет на тебя.");
+                Console.WriteLine("БЫСТРО ВЕРНИСЬ.");
+                Console.WriteLine("Его ор слышит вся школа");
+                Console.WriteLine("Нажми 'Enter' чтобы продолжить!");
+                Console.ReadLine();
+                Second();
+                break;
             }
             }
         } 
@@ -89,35 +89,35 @@ namespace textAdventure
                         Console.ReadLine();
                         GameOver();
                     }
-            }
+        }
 
-           public static void Third()
-            {  
-                Console.WriteLine("Будет взрыв не хочешь спрятаться в ванной и  так ты врываешься в ванную а там все твои друзья и родственники");
-                Console.WriteLine("Они кричат сюрприз! и ты вспоминаешь что у тебя сегодня день рождения.");
-                Console.WriteLine("Сколько тебе лет?");
-                Console.WriteLine("Тебе:  (лет/год)");
-                int age = int.TryParse(Console.ReadLine(), out age);
-                while (age < 100)
-                {   
-                    Console.WriteLine("Серьезно? ты выглядишь старше этого!");
-                    Console.WriteLine("Сколько тебе лет на самом деле?");
-                    Console.WriteLine("Тебе: (Лет/Год)");
-                    int age = int.TryParse(Console.ReadLine(), out age);
-                }
-                    Console.WriteLine("Ух ты какой ты старый!");
-                    YouWin();
-            }
+        public static void Third()
+        {  
+           Console.WriteLine("Будет взрыв не хочешь спрятаться в ванной и  так ты врываешься в ванную а там все твои друзья и родственники");
+           Console.WriteLine("Они кричат сюрприз! и ты вспоминаешь что у тебя сегодня день рождения.");
+           Console.WriteLine("Сколько тебе лет?");
+           Console.WriteLine("Тебе:  (лет/год)");
+           int age = int.TryParse(Console.ReadLine(), out age);
+           while (age < 100)
+        {   
+           Console.WriteLine("Серьезно? ты выглядишь старше этого!");
+           Console.WriteLine("Сколько тебе лет на самом деле?");
+           Console.WriteLine("Тебе: (Лет/Год)");
+           int age = int.TryParse(Console.ReadLine(), out age);
+        }
+           Console.WriteLine("Ух ты какой ты старый!");
+           YouWin();
+        }
                
-            public static void GameOver()
-            {   
-                Console.Clear();
-                Console.WriteLine("На твоих похоронах рассказывают про твою храбрость потом они понимают на чьих похоронах они присутвсвуют и забирают свои слова обратно");
-                Console.WriteLine("В следующий раз повезет больше!");
-                Console.ReadLine();
-                Console.Clear();
-                GameTitle();
-            }
+        public static void GameOver()
+        {   
+            Console.Clear();
+            Console.WriteLine("На твоих похоронах рассказывают про твою храбрость потом они понимают на чьих похоронах они присутвсвуют и забирают свои слова обратно");
+            Console.WriteLine("В следующий раз повезет больше!");
+            Console.ReadLine();
+            Console.Clear();
+            GameTitle();
+        }
 
             public static void YouWin()
             {   
